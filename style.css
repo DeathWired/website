@@ -1,91 +1,36 @@
 body {
-
-margin: 0;
-
-margin-top: 50px;
-
+margin:0;
+font-family: 'Noto Sans JP', sans-serif;
+color: #ffffff;
 }
 
- 
-
-header {
-
-display: flex;
-
-position: fixed;
-
-top: 0;
-
-left: 0;
-
-right: 0;
-
-height: 50px;
-
-line-height: 50px;
-
-background-color: #eee;
-
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8097CC;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
- 
-
-header * {
-
-display: inline;
-
-height: 50px;
-
+li {
+  float: left;
 }
 
- 
-
-headerul {
-
-padding: 0;
-
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
- 
-
-header li {
-
-margin-left: 20px;
-
+li a:hover:not(.active) {
+  background-color: #98B3F2;
 }
 
- 
-
-section {
-
-height: 100vh;
-
-border: 1px solid black;
-
-display: flex;
-
-justify-content: center;
-
-align-items: center;
-
-text-align: center;
-
-}
-
- 
-
-#hero .profile-img {
-
-width: 300px;
-
-}
-
- 
-
-footer {
-
-text-align: center;
-
-padding: 50px;
-
+.active {
+  background-color: #98B3F2;
 }
