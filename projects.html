@@ -7,7 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-<body style="background-color:#192330">
+</head>
+<body onload="getRepos()" style="background-color:#192330">
 <ul class="topnav">
   <li><a href="index">Home</a></li>
   <li><a href="discord">Discord</a></li>
@@ -18,6 +19,24 @@
 <div style="padding:20px;">
 <h1>My Projects<h1>
 </div>
+<div style="padding:20px"id='divResult'>
+
+</div>
+<script>
+  const divResult=document.getElementById("divResult")
+  async function getRepos() {
+      const url = "https://api.github.com/users/deathwired/repos"
+      const response = await fetch(url)
+      const result = await response.json()
+      result.forEach(i=>{
+          const anchor = document.createElement("a")
+          anchor.href = i.html_url;
+          anchor.textContent =i.full_name;
+          anchor.target = '_blank'
+          divResult.appendChild(anchor)
+          divResult.appendChild(document.createElement("br"))
+      })
+  }
+</script> 
 </body>
-</head>
 </html>
