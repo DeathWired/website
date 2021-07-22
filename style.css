@@ -3,6 +3,31 @@ margin:0;
 font-family: 'Noto Sans JP', sans-serif;
 color: #ffffff;
 }
+
+a:link {
+  color: #8097CC;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #98B3F2;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 ul.topnav {
   list-style-type: none;
   margin: 0;
