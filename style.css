@@ -57,3 +57,8 @@ ul.topnav li.right {float: right;}
   ul.topnav li {float: none;}
   ul.topnav li a {padding: 10px;}
 }
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
