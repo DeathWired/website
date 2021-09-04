@@ -57,3 +57,10 @@ ul.topnav li.right {float: right;}
   ul.topnav li {float: none;}
   ul.topnav li a {padding: 10px;}
 }
+
+footer{
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   padding: 5px;
+}
