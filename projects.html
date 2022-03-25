@@ -1,44 +1,50 @@
 <html>
+
 <head>
-<meta name="description" content="DeafWired!">
-<meta name="keywords" content="deafwired">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="image/x-icon" href="images/DeafWired.ico">
-<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-<title>Projects</title>
+  <meta name="description" content="DeafWired!">
+  <meta name="keywords" content="deafwired">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" type="image/x-icon" href="images/DeafWired.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <script src="navbar.js"></script>
+  <title>Projects</title>
 </head>
+
 <body onload="getRepos()" style="background-color:#192330">
-<ul class="topnav">
-  <li><a href="index"><i class="fas fa-home"></i> Home</a></li>
-  <li><a href="discord"><i class="fab fa-discord"></i> Discord</a></li>
-  <li><a href="mailto:mteamspam@gmail.com"><i class="fas fa-envelope"></i> Contact</a></li>
-  <li><a class="active" href="projects"><i class="fab fa-github"></i> Projects</a></li>
-  <li class="right"><a href="about"><i class="fas fa-user"></i> About</a></li>
-</ul>
-<div style="padding:20px"id='divResult'>
-  <h1>My Projects<h1>
-   
-</div>
-<script>
-  const divResult=document.getElementById("divResult")
-  async function getRepos() {
+  <div class="topnav" id="myTopnav">
+    <a class="title" href="https://www.deafwired.tk/"><i class="fa fa-home"></i> DeafWired</a>
+    <a href="mailto:mteamspam@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+    <a href="projects"><i class="fab fa-github"></i> Projects</a>
+    <a href="about"><i class="fas fa-user"></i> About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div class="Content" id='divResult'>
+    <h1>My Projects<h1>
+  </div>
+  <script>
+    const divResult = document.getElementById("divResult")
+    async function getRepos() {
       const url = "https://api.github.com/users/deathwired/repos"
       const response = await fetch(url)
       const result = await response.json()
-      result.forEach(i=>{
-          const anchor = document.createElement("a")
-          anchor.href = i.html_url;
-          anchor.textContent =i.full_name;
-          anchor.target = '_blank'
-          divResult.appendChild(anchor)
-          divResult.appendChild(document.createElement("br"))
+      result.forEach(i => {
+        const anchor = document.createElement("a")
+        anchor.href = i.html_url;
+        anchor.textContent = i.full_name;
+        anchor.target = '_blank'
+        divResult.appendChild(anchor)
+        divResult.appendChild(document.createElement("br"))
       })
-  }
-</script> 
-<footer><a href="chat">Support</a></footer>
+    }
+  </script>
 </body>
+
 </html>
