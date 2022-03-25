@@ -1,12 +1,12 @@
-body{
+body {
   margin: 0;
-  background-color:#192330;
+  background-color: #192330;
   color: white;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .topnav {
   overflow: hidden;
-  background-color: #8097CC;
+  background-color: #8097cc;
 }
 
 .topnav a {
@@ -21,9 +21,9 @@ body{
 }
 .topnav .title {
   float: left;
-  background-color: #8097CC;
+  background-color: #8097cc;
   display: block;
-  text-decoration:none;
+  text-decoration: none;
 }
 .topnav a:hover {
   background-color: white;
@@ -49,37 +49,44 @@ body{
 .topnav .icon {
   display: none;
 }
-.Content{
-  padding:20px
+.Content {
+  padding: 20px;
 }
 p {
   font-size: 18px;
 }
 
-.logo{
+.logo {
   height: 200px;
   width: auto;
 }
-footer{
-   position: fixed;
-   bottom: 0;
-   right: 0;
-   padding: 5px;
+.Active {
+  background-color: white;
+  color: black;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
 }
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
   }
-  .paragraph{
+  .paragraph {
     width: auto;
   }
 }
 
-
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -92,9 +99,9 @@ footer{
     text-align: left;
   }
 }
-@media screen and (max-width:400px){
-  .logo{
-    width:100%;
-    height:auto;
+@media screen and (max-width: 400px) {
+  .logo {
+    width: 100%;
+    height: auto;
   }
 }
