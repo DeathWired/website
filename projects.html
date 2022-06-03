@@ -13,6 +13,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <script src="navbar.js"></script>
   <title>Projects</title>
+  <style>
+  .grid {display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1%;
+    text-decoration: none;}
+  .projects a {text-decoration: none;
+      text-align: center;}
+  .grid a div {width: 450px;
+      padding-bottom: 10%;
+      background: #8097cc;
+      border-radius: 25px;
+      text-decoration: none;}
+  @media (max-width: 600px) {
+    .grid {grid-template-columns: 1fr;}
+    .grid a div {width:auto}}
+</style>
 </head>
 
 <body onload="getRepos()">
@@ -25,23 +42,22 @@
       <i class="fa fa-bars"></i>
     </a>
   </div>
-
-  <div class="Content" id='divResult'>
-    <h1>My Projects<h1>
+  <h1 style="padding: 20px;">My Projects</h1>
+  <div id='divResult' class="grid">
   </div>
   <script>
     const divResult = document.getElementById("divResult")
     async function getRepos() {
-      const url = "https://api.github.com/users/deathwired/repos"
-      const response = await fetch(url)
+      const response = await fetch("https://api.github.com/users/deathwired/repos")
       const result = await response.json()
       result.forEach(i => {
-        const anchor = document.createElement("a")
-        anchor.href = i.html_url;
-        anchor.textContent = i.full_name;
-        anchor.target = '_blank'
-        divResult.appendChild(anchor)
-        divResult.appendChild(document.createElement("br"))
+        const repo = document.createElement("a")
+        repo.target = "_blank"
+        repo.href= i.html_url
+        repo.className = "projects"
+        if (i.description == null){repo.innerHTML = "<div><h1 style='text-align:center'>"+i.name+"</h1></div>"} 
+        if (i.description !== null){repo.innerHTML = "<div><h1 style='text-align:center'>"+i.name+"</h1><p>"+i.description+"</p></div>"}
+        divResult.appendChild(repo)
       })
     }
   </script>
