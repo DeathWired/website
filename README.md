@@ -1,2 +1,2 @@
 # Deafwired
-### This is my website, containing everything about me and where =I am.
+### This is my website, containing everything about me and where I am.

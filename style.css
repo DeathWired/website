@@ -30,7 +30,7 @@ body {
   color: black;
 }
 .title a:hover {
-  background-color: orange;
+  background-color: white;
 }
 
 .topnav a.active {
