@@ -16,7 +16,6 @@
   <style>
   .grid {display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 1%;
     text-decoration: none;}
   .projects a {text-decoration: none;
@@ -28,6 +27,9 @@
       background: #8097cc;
       border-radius: 25px;
       text-decoration: none;}
+  @media (max-width: 826px){
+    .grid {grid-template-columns: 1fr 1fr;}
+  }
   @media (max-width: 600px) {
     .grid {grid-template-columns: 1fr;}
     .grid a div {width:auto}}
@@ -57,8 +59,9 @@
         repo.target = "_blank"
         repo.href= i.html_url
         repo.className = "projects"
-        if (i.description == null){repo.innerHTML = "<div><h1 style='text-align:center'>"+i.name+"</h1></div>"} 
-        if (i.description !== null){repo.innerHTML = "<div><h1 style='text-align:center'>"+i.name+"</h1><p>"+i.description+"</p></div>"}
+        repo.style = "text-align:center; text-decoration: none; color:white;"
+        if (i.description == null){repo.innerHTML = "<div><h1>"+i.name+"</h1></div>"} 
+        if (i.description !== null){repo.innerHTML = "<div><h1>"+i.name+"</h1><p>"+i.description+"</p></div>"}
         divResult.appendChild(repo)
       })
     }
