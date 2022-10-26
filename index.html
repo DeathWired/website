@@ -13,7 +13,7 @@
   <h1 style>DeafWired@<a id="cycle" class="fadeOut"></a></h1>
   <!-- stolen and modified from many a stackoverflow -->
   <script>
-    const textList=['<i class="fab fa-instagram fa-lg"></i>','<i class="fab fa-github fa-lg"></i>','<i class="fab fa-twitter fa-lg"></i>'];
+    const textList=['<i class="fab fa-instagram fa-lg fa-fw"></i>','<i class="fab fa-github fa-lg fa-fw"></i>','<i class="fab fa-twitter fa-lg fa-fw"></i>'];
     const linklist=["https://www.instagram.com/deafwired/","https://github.com/DeathWired","https://twitter.com/Deaf_Wired"];
     const cycle = document.getElementById("cycle");
     let i = 0;
@@ -24,7 +24,7 @@
     i = ++i % textList.length;
     };
     cycleText();
-    setInterval(cycleText, 3000);
+    setInterval(cycleText, 6000);
 </script>
   <footer><a style="color:white;"; href="mailto:mtesamspam@gmail.com"><i class="fas fa-envelope fa-lg"></i></a></footer>
 </body>

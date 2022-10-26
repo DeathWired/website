@@ -22,7 +22,7 @@ footer{
   padding: 5px;
 }
 .fadeOut{
-  animation: fadeInOut 3s  infinite
+  animation: fadeInOut 6000ms  infinite
 }
 
 @keyframes fadeInOut {
