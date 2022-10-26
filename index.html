@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" type="image/x-icon" href="images/DeafWired.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c9aabc0080.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
   <title>DeafWired</title>
 </head>
@@ -11,19 +13,19 @@
   <h1 style>DeafWired@<a id="cycle" class="fadeOut"></a></h1>
   <!-- stolen and modified from many a stackoverflow -->
   <script>
-    const textList=["Instagram","Github","Twitter"];
+    const textList=['<i class="fab fa-instagram fa-lg"></i>','<i class="fab fa-github fa-lg"></i>','<i class="fab fa-twitter fa-lg"></i>'];
     const linklist=["https://www.instagram.com/deafwired/","https://github.com/DeathWired","https://twitter.com/Deaf_Wired"];
     const cycle = document.getElementById("cycle");
     let i = 0;
     const cycleText = () => {
     cycle.setAttribute("href",linklist[i])
-    cycle.innerHTML = textList[i];
     cycle.setAttribute("class","fadeOut")
+    cycle.innerHTML = textList[i];
     i = ++i % textList.length;
     };
     cycleText();
     setInterval(cycleText, 3000);
 </script>
-  <footer><a href="mailto:mtesamspam@gmail.com">email</a></footer>
+  <footer><a style="color:white;"; href="mailto:mtesamspam@gmail.com"><i class="fas fa-envelope fa-lg"></i></a></footer>
 </body>
 </html>
