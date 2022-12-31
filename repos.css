@@ -30,6 +30,7 @@ h2{
 }
 .grid a div h2{
   color: orange;
+  padding: 3%;
 }
 .grid a div p{
   margin-left:2%;
