@@ -4,15 +4,21 @@ body{
   background-color: black;
   color:white;
 }
-h1{
+.title{
   font-size: calc(1em + 3vw);
   text-align: center;
 }
 a{
   text-decoration: none
 }
+a:link{
+  color:#1069c9;
+}
 a:visited{
-  color: #0066cc;
+  color:#1069c9;
+}
+a:hover{
+  color:#1069c9;
 }
 footer{
   position: fixed;
@@ -22,11 +28,10 @@ footer{
   padding: 5px;
 }
 .fadeOut{
-  animation: fadeInOut 6000ms  infinite
+  animation: fadeInOut 6s  infinite
 }
-
 @keyframes fadeInOut {
 0% { opacity: 0; }
 50% { opacity: 1; }
-100% { opacity:0;}
+100% { opacity: 0;}
 }

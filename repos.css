@@ -1,0 +1,50 @@
+h2{
+  font-size:x-large;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1%;
+  text-decoration: none;
+  animation: fadeIn 3s;
+}
+@keyframes fadeIn{
+  0% {opacity: 0;
+      transform: translateX(-100px);
+  }
+  100% {opacity: 1;
+      transform: translateX(0px);
+  }
+}
+.projects a {
+  text-decoration: none;
+  text-align: center;
+}
+.grid a div {
+  align-items: center;
+  width: 30wh;
+  padding-bottom: 10%;
+  background: #2b2a33;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.grid a div h2{
+  color: orange;
+}
+.grid a div p{
+  margin-left:2%;
+  margin-right: 2%;
+}
+@media (max-width: 1050px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 780px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .grid a div {
+    width: auto;
+  }
+}

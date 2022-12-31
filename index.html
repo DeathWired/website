@@ -7,25 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/c9aabc0080.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+  <link rel="stylesheet" href="repos.css" media="screen">
   <title>DeafWired</title>
 </head>
 <body>
-  <h1 style>DeafWired@<a id="cycle" class="fadeOut"></a></h1>
-  <!-- stolen and modified from many a stackoverflow -->
-  <script>
-    const textList=['<i class="fab fa-instagram fa-lg fa-fw"></i>','<i class="fab fa-github fa-lg fa-fw"></i>','<i class="fab fa-twitter fa-lg fa-fw"></i>'];
-    const linklist=["https://www.instagram.com/deafwired/","https://github.com/DeathWired","https://twitter.com/Deaf_Wired"];
-    const cycle = document.getElementById("cycle");
-    let i = 0;
-    const cycleText = () => {
-    cycle.setAttribute("href",linklist[i])
-    cycle.setAttribute("class","fadeOut")
-    cycle.innerHTML = textList[i];
-    i = ++i % textList.length;
-    };
-    cycleText();
-    setInterval(cycleText, 6000);
-</script>
-  <footer><a style="color:white;"; href="mailto:mtesamspam@gmail.com"><i class="fas fa-envelope fa-lg"></i></a></footer>
+  <h1 class="title">DeafWired<span style="color:orange;">@</span><a id="cycle" class="fadeOut"></a></h1>
+  <div id='divResult' class="grid">
+
+  </div>
+  <footer title="LINK!!"><a style="color:white;"; href="mailto:mtesamspam@gmail.com"><i class="fas fa-envelope fa-lg"></i></a></footer>
+  <script src="repos.js"></script>
+  <script src="animate.js"></script>
 </body>
 </html>

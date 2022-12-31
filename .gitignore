@@ -1,3 +1,6 @@
-test.css
-test.html
-template.html
+*
+!index.html
+!style.css
+!repos.css
+!repos.js
+!animate.js
