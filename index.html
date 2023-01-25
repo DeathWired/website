@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" type="image/x-icon" href="images/DeafWired.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Matt Flynn" />
+    <meta name="description" content="DeafWired's amazing website" />
+    <meta name="keywords" content="DeafWired" />
     <script
       src="https://kit.fontawesome.com/c9aabc0080.js"
       crossorigin="anonymous"
@@ -14,18 +17,23 @@
     <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
     <title>DeafWired</title>
   </head>
-  <body>
+  <body id="body">
     <h1 class="title">
       <span id="baffle">DeafWired</span>@<a id="cycle" class="fadeOut"></a>
     </h1>
+    <p class="paragraph">Matt Flynn</p>
     <div id="divResult" class="grid"></div>
-    <footer title="LINK!!">
-      <a style="color: white" ; href="mailto:mtesamspam@gmail.com"
-        ><i class="fas fa-envelope fa-lg"></i
-      ></a>
+    <footer>
+      <div class="button">
+        <i id="button" class="fas fa-sun fa-lg" onclick="toggleDarkMode()"></i>
+      </div>
+      <a class="email" ; href="mailto:mtesamspam@gmail.com">
+        <i class="emailColor fas fa-envelope fa-lg"></i>
+      </a>
     </footer>
     <script src="repos.js"></script>
     <script src="animate.js"></script>
     <script src="baffle.js"></script>
+    <script src="darkmode.js"></script>
   </body>
 </html>

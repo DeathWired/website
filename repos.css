@@ -20,13 +20,18 @@ h2{
   text-decoration: none;
   text-align: center;
 }
-.grid a div {
+.grid a div{
   align-items: center;
   width: 30wh;
   padding-bottom: 10%;
-  background: #2b2a33;
   border-radius: 25px;
   text-decoration: none;
+}
+.dark-body .grid a div {
+  background-color: #2b2a33;
+}
+.light-body .grid a div{
+  background-color: lightgrey;
 }
 .grid a div h2{
   color: orange;
@@ -35,6 +40,12 @@ h2{
 .grid a div p{
   margin-left:2%;
   margin-right: 2%;
+}
+.dark-body .grid a div p{
+  color: white;
+}
+.light-body .grid a div p{
+  color: black;
 }
 @media (max-width: 1050px) {
   .grid {

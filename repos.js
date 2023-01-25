@@ -7,7 +7,7 @@ async function getRepos() {
     repo.target = "_blank";
     repo.href = i.html_url;
     repo.className = "projects";
-    repo.style = "text-align:center; text-decoration: none; color:white;";
+    repo.style = "text-align:center; text-decoration: none;";
     if (i.description == null) {
       repo.innerHTML = "<div><h2>" + i.name + "</h2></div>";
     }
