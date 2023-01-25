@@ -4,6 +4,7 @@ const cookieValue = document.cookie
   ?.split("=")[1];
 if (cookieValue === undefined) {
   document.cookie = "DarkMode=True; SameSite=Lax; Secure";
+  document.getElementById("body").className = "dark-body";
 } else if (cookieValue === "True") {
   document.getElementById("body").className = "dark-body";
 } else {
