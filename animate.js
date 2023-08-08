@@ -6,8 +6,8 @@ const textList = [
 ];
 const linklist = [
   "https://www.instagram.com/deafwired/",
-  "https://github.com/DeathWired",
-  "https://twitter.com/Deaf_Wired",
+  "https://github.com/deafwired",
+  "https://twitter.com/deaf_wired",
   "https://www.chess.com/member/deafwired",
 ];
 const cycle = document.getElementById("cycle");

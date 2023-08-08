@@ -1,5 +1,5 @@
-h2{
-  font-size:x-large;
+h2 {
+  font-size: x-large;
 }
 .grid {
   display: grid;
@@ -7,20 +7,23 @@ h2{
   grid-gap: 1%;
   text-decoration: none;
   animation: fadeIn 3s;
+  padding-bottom: 3%;
 }
-@keyframes fadeIn{
-  0% {opacity: 0;
-      transform: translateX(-100px);
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
-  100% {opacity: 1;
-      transform: translateX(0px);
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 .projects a {
   text-decoration: none;
   text-align: center;
 }
-.grid a div{
+.grid a div {
   align-items: center;
   width: 30wh;
   padding-bottom: 10%;
@@ -30,21 +33,21 @@ h2{
 .dark-body .grid a div {
   background-color: #2b2a33;
 }
-.light-body .grid a div{
+.light-body .grid a div {
   background-color: lightgrey;
 }
-.grid a div h2{
+.grid a div h2 {
   color: orange;
   padding: 3%;
 }
-.grid a div p{
-  margin-left:2%;
+.grid a div p {
+  margin-left: 2%;
   margin-right: 2%;
 }
-.dark-body .grid a div p{
+.dark-body .grid a div p {
   color: white;
 }
-.light-body .grid a div p{
+.light-body .grid a div p {
   color: black;
 }
 @media (max-width: 1050px) {
