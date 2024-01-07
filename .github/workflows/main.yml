@@ -14,3 +14,4 @@ jobs:
         server: ftp.flynnmj.org
         username: matt@deafwired.dev
         password: ${{ secrets.ftp_password }}
+        local-dir: ./public/
